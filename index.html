@@ -1,0 +1,54 @@
+<html>
+
+<body>
+<style>
+	body {
+	  background: #fff;
+	}
+
+	canvas {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 100vh;
+	  width: 100vw;
+	}
+
+	.back {
+	  z-index: 0;
+	  -webkit-filter: blur(6px);
+	          filter: blur(6px);
+	 
+	}
+
+	.mid {
+	  z-index: 1;
+	  -webkit-filter: blur(4px);
+	          filter: blur(4px);
+	  mix-blend-mode: lighten;
+	 }
+
+	.front {
+	  z-index: 2;
+	  -webkit-filter: blur(1px);
+	          filter: blur(1px);
+	  mix-blend-mode: luminosity;
+	}
+
+	 .photo {
+    	display: none;
+	}
+</style>
+	<canvas class="back"></canvas>
+	<canvas class="mid"></canvas>
+	<canvas class="front"></canvas>
+
+	<img class="photo" id="photo-sm" src="img/email-sm.png">
+    <img class="photo" id="photo-md" src="img/email-md.png">
+    <img class="photo" id="photo-lg" src="img/email-lg.png">
+
+    <script type="text/javascript" src="vector2.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
